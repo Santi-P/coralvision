@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Coral Patch Classification
 
 You can use the [editor on GitHub](https://github.com/Santi-P/coralvision/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
