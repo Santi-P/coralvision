@@ -20,6 +20,9 @@ The Moorea Labeled Corals dataset contains 2055 high-resolution underwater image
 
 The main task to be automated is then to label random pixels in a given image. The authors of the dataset argue that “A full manual segmentation would be too time-consuming to collect and neither bounding boxes nor gross image labels provide the level of detail needed.” Additionally, there is high variability in the size, color, and shape of corals and the boundaries are often ambiguous. 
 
+![sample_annotations](docs/assets/sample_anno.png)
+*Random Point Annotations*
+
 ## Method
 
 ### Data & Preprocessing
