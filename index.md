@@ -91,4 +91,6 @@ Another approach with using this dataset would be to try to cast it into a segme
 
 ## References
 
-
+- Beijbom, O., Edmunds, P.J., Kline, D.I., Mitchell, B.G., & Kriegman, D.J. (2012). Automated annotation of coral reef survey images. 2012 IEEE Conference on Computer Vision and Pattern Recognition, 1170-1177.
+- He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 770-778.
+- Szegedy, C., Liu, W., Jia, Y., Sermanet, P., Reed, S.E., Anguelov, D., Erhan, D., Vanhoucke, V., & Rabinovich, A. (2015). Going deeper with convolutions. 2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 1-9.
