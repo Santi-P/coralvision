@@ -14,7 +14,7 @@ The Colab Notebook can be found [here](https://colab.research.google.com/drive/1
 
 [Here](ab) is the link to a short video presentation.
 
-An additional notebook containing some preprocessing and visualization can be found [here](ab).
+An additional notebook containing some preprocessing and visualization can be found [here](https://github.com/Santi-P/coralvision/blob/main/coral_preprocess.ipynb).
 
 ## Moorea Labeled Corals Dataset (MLC)
 
@@ -82,9 +82,7 @@ A systematic pattern of misclassification is evident when further examining the 
 
 <p align="center">
   <img src="docs/assets/confusion_ggnet.png"  width="500" height="400" />
-
 </p>
-
 
 This systematic misclassification was also evident in the SVM baseline below.
 
