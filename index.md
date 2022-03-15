@@ -23,6 +23,7 @@ The main task to be automated is then to label random pixels in a given image. T
 
 <p align="center">
   <img src="docs/assets/sample_patch_large.png" />
+  
   <em>Images and Annotations from the MLC dataset</em> 
 
 </p>
