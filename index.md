@@ -57,6 +57,10 @@ Additionally, I played around with the contrast and saturation but it was diffic
 | F1          | -      | -            | 0.35      | 0.59     | 0.68      |
 | Weighted F1 | -      | -            | 0.57      | 0.73     | 0.73      |
 
+
+![conf_ggnet](docs/assets/confusion_ggnet.jpeg)![conf_svm](docs/assets/confusion_svm.jpeg)
+
+
 ### Discussion
 
 ### Further Work 
