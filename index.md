@@ -84,9 +84,6 @@ This systematic misclassification was also evident in the SVM baseline below.
  
  This fact might actually be a hard constraint on how well the models can perform. Although the authors of the dataset do not provide inter-annotator agreements, similar coral patch classification datasets only show around 80%-90% inter-annotator agreements. This gets especially worse when experts are asked to differentiate between algae species such as CCA and turf algae. In short, this dataset is hard and might require additional knowledge that is not visually present. Human experts are also not that good at differentiating seaweed types. 
 
-
-### Discussion
-
 ## Further Work 
 
 ## References
