@@ -43,13 +43,14 @@ I started out by extracting square patches of different sizes in order to find w
 
 Additionally, I played around with the contrast and saturation but it was difficult to determine whether this affected the final results in an impactful way. I deemed data augmentations techniques such as random flips and crops to be unnecessary for classifying coral patches, however, I did not rigorously test them out. Finally, I extracted 3x128x128 tensors and normalized them in order to make the data compatible with models that were pre-trained on Imagenet. I used bilinear resizing to fit the input dimensions of different pre-trained models. 
 
+### Models 
+
+I tested out three models: a simple two-layer CNN, pre-trained Resnet18, and GoogLenet. I intended to use the small CNN model as a baseline and to see how it compared to the results from the previous approach which used SVMs. The model architecture was taken from the PyTorch tutorial for classifying CIFAR dataset. It consists of two convolutional layers with kernel size 5 and 6 and 16 output channels respectively. Max pooling is used between the layers and the results of the convolutions are passed into 3 Linear layers with ReLU activations. 
+
+The next I tested pre-trained image recognition models. I chose Resnet18 and Googlenet (Inception V1) due to their relatively high performance on image classification tasks as well their size and ease of use within PyTorch. 
 
 
-### Data & Preprocessing
-
-### Classification Models
-
-### Results
+## Results
 
 |             | Random | SVM Baseline | Small CNN | Resnet18 | GoogleNet |
 |-------------|--------|--------------|-----------|----------|-----------|
@@ -63,6 +64,8 @@ Additionally, I played around with the contrast and saturation but it was diffic
 
 ### Discussion
 
-### Further Work 
+## Further Work 
+
+## References
 
 
