@@ -10,9 +10,9 @@ In order to aid conservation efforts and inform environmental policies, it is im
 
 Recent efforts have been made to create high-quality survey images of coral reefs. However, manual annotation is often tedious and expensive and the expertise of marine ecologists can be better used elsewhere. It has been claimed that as little as 1-2 % of captured images get annotated. In this project, I explore ways to perform automatic annotation of high-resolution, close-range survey images of coral reefs. The dataset for this project is taken from the Moorea Coral Reef Long Term Ecological Research [MCRLTER](http://mcr.lternet.edu/). 
 
-The Colab Notebook can be found [here](https://colab.research.google.com/drive/1BdOVKfzQDa5M9Nl6r9FscYYf4isn3kRT?usp=sharing)
-[Here](ab) is the link to a short video presentation.
-An additional notebook containing some preprocessing and visualization can be found [here](ab).
+-The Colab Notebook can be found [here](https://colab.research.google.com/drive/1BdOVKfzQDa5M9Nl6r9FscYYf4isn3kRT?usp=sharing)
+-[Here](ab) is the link to a short video presentation.
+-An additional notebook containing some preprocessing and visualization can be found [here](ab).
 
 ## Moorea Labeled Corals Dataset (MLC)
 
