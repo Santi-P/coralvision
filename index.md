@@ -78,6 +78,10 @@ This systematic misclassification was also evident in the SVM baseline below.
 ![conf_svm](docs/assets/confusion_svm.png)
 
  There are a few possible explanations for this that may not be mutually exclusive. Firstly, the dataset is highly imbalanced and Crustose Coralline Algae account for around half of all the patches. This can result in the models being biased towards predicting CCA in the absence of information. It was also noted by the authors of the dataset that CCA and Turf algae are notoriously difficult to distinguish resulting in poor inter-annotator agreement in other datasets. Another reason for the confusion is that CCA usually grows on dead corals! These overgrown dead corals are then classified as CCA. 
+ 
+ This fact might actually be a hard constraint on how well the models can perform. Although the authors of the dataset do not provide inter-annotator agreements, similar coral patch classification datasets only show around 80%-90% inter-annotator agreements. This gets especially worse when experts are asked to differentiate between algae species such as CCA and turf algae. In short, this dataset is hard and might require additional knowledge that is not visually present. Human experts are also not that good at differentiating seaweed types. 
+
+
 ### Discussion
 
 ## Further Work 
