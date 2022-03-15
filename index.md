@@ -49,9 +49,9 @@ Additionally, I played around with the contrast and saturation but it was diffic
 
 ### Models 
 
-I tested out three models: a simple two-layer CNN, pre-trained Resnet18, and GoogLenet. I intended to use the small CNN model as a baseline and to see how it compared to the results from the previous approach which used SVMs. The model architecture for the CNN classifer was taken from the PyTorch [tutorial](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html) for classifying CIFAR dataset. It consists of two convolutional layers with kernel size 5 and 6 and 16 output channels respectively. Max pooling is used between the layers and the results of the convolutions are passed into 3 Linear layers with ReLU activations. 
+I tested out three models: a simple two-layer CNN, two pre-trained Resnet models, and pre-trained GoogleNet. I intended to use the small CNN model as a baseline and to see how it compared to the results from the previous approach which used SVMs. The model architecture for the CNN classifer was taken from the PyTorch [tutorial](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html) for classifying CIFAR dataset. It consists of two convolutional layers with kernel size 5 and 6 and 16 output channels respectively. Max pooling is used between the layers and the results of the convolutions are passed into 3 Linear layers with ReLU activations. 
 
-The next I tested pre-trained image recognition models. I chose Resnet18 (He, 2016) and Googlenet, a.k.a Inception V1 (Szegedy, 2014) due to their strong performance on image classification tasks as well their relatively small size, low fine-tuning time, and ease of use within PyTorch. I used the SGD optimizer for 5 epochs. I noticed that the small CNN had trouble converging and increased the training epochs for it to 10 while the rest of the pre-trained models remain the same. The training script from the PyTorch tutorial was used and I slightly modified it to output accuracies on the validation set after every epoch. A learning rate scheduler with 0.1, 0.001, and 0.001 was used with the later epochs having a smaller learning rate. Fine-tuning for Resnet18 and Googlenet took around 10-15 minutes per epoch on Google Colab GPU.
+The next I tested pre-trained image recognition models. I chose Resnet18 and Resnet152 (He, 2016) and Googlenet, a.k.a Inception V1 (Szegedy, 2014) due to their strong performance on image classification tasks as well their relatively small size, low fine-tuning time, and ease of use within PyTorch. I used the SGD optimizer for 5 epochs. I noticed that the small CNN had trouble converging and increased the training epochs for it to 10 while the rest of the pre-trained models remain the same. The training script from the PyTorch tutorial was used and I slightly modified it to output accuracies on the validation set after every epoch. A learning rate scheduler with 0.1, 0.001, and 0.001 was used with the later epochs having a smaller learning rate. Fine-tuning for Resnet18 and Googlenet took around 10-15 minutes per epoch on Google Colab GPU.
 
 
 
@@ -63,18 +63,16 @@ Although I did not perform rigorous within-year classification, I still set asid
 
 
 
-
-|             | Random | SVM Baseline | Small CNN | Resnet18 | GoogleNet |
-|-------------|--------|--------------|-----------|----------|-----------|
-| Accuracy    | 0.29   | 0.67         | 0.59      | 0.71     | 0.74      |
-| F1          | -      | -            | 0.35      | 0.59     | 0.68      |
-| Weighted F1 | -      | -            | 0.57      | 0.73     | 0.73      |
-
+|             | Random | SVM Baseline | Small CNN | Resnet18 | Resnet152 | GoogleNet |
+|-------------|--------|--------------|-----------|----------|-----------|-----------|
+| Accuracy    | 0.29   | 0.67         | 0.59      | 0.71     | 0.74      | 0.74      |
+| F1          | -      | -            | 0.35      | 0.59     | 0.68      | 0.68      |
+| Weighted F1 | -      | -            | 0.57      | 0.73     | 0.73      | 0.73      |
 
 
 The table above shows the classification results for different models. The random and SVM baselines are taken from the original paper. As expected, the small CNN performed rather poorly. This was more or less expected and its poor performance suggests that the small CNN lacks the complexity to handle this dataset. However, it was still rather surprising how poorly it compared to a non-deep learning method. This goes to show that meticulously filters in addition to old-school machine learning methods can still perform very well. 
 
-With the pre-trained models, there is a significant increase in performance with GoogleNet, the best performing model, achieving a 7% increase over the SVM baseline. These results show that deeper and larger models perform better as well as the viability of transfer learning from generic image recognition tasks to domain-specific tasks such as underwater coral patch classification in this case. 
+With the pre-trained models, there is a significant increase in performance with GoogleNet, the best performing model, achieving a 7% increase over the SVM baseline. These results show that deeper and larger models generally perform better as well as the viability of transfer learning from generic image recognition tasks to domain-specific tasks such as underwater coral patch classification in this case. However, it is rather surprising that Resnet152 did not outperform GoogleNet even though the former outperforms the latter by nearly 6% on Imagenet. 
 
 A systematic pattern of misclassification is evident when further examining the errors produced by the models. Depicted below is the confusion matrix of the Googlenet model on the 2009 data split. The largest source of misclassification is due to the models confusing Crustose Coralline Algae (CCA) for various types of corals, especially with Montipora corals. 
 
