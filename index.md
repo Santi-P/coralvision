@@ -82,15 +82,15 @@ A systematic pattern of misclassification is evident when further examining the 
 
 <p align="center">
   <img src="docs/assets/confusion_ggnet.png"  width="500" height="400" />
+  
 </p>
 
 This systematic misclassification was also evident in the SVM baseline below.
 <p align="center">
   <img src="docs/assets/confusion_svm.png" />
+  
     <em>Confusion Matrix from Beijbom et al's SVM classifier</em> 
 </p>
-
-![conf_svm](docs/assets/confusion_svm.png)
 
  There are a few possible explanations for this that may not be mutually exclusive. Firstly, the dataset is highly imbalanced and Crustose Coralline Algae account for around half of all the patches. This can result in the models being biased towards predicting CCA in the absence of information. It was also noted by the authors of the dataset that CCA and Turf algae are notoriously difficult to distinguish resulting in poor inter-annotator agreement in other datasets. Another reason for the confusion is that CCA usually grows on dead corals! These overgrown dead corals are then classified as CCA. 
  
