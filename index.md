@@ -87,9 +87,7 @@ A systematic pattern of misclassification is evident when further examining the 
 This systematic misclassification was also evident in the SVM baseline below.
 <p align="center">
   <img src="docs/assets/confusion_svm.png" />
-  
     <em>Confusion Matrix from Beijbom et al's SVM classifier</em> 
-
 </p>
 
 ![conf_svm](docs/assets/confusion_svm.png)
