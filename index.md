@@ -77,7 +77,8 @@ A systematic pattern of misclassification is evident when further examining the 
 <p align="center">
   <img src="docs/assets/confusion_ggnet.png" />
   <em>Confusion Matrix for my best-performing model</em> 
-
+  width="400" 
+  height="400"
 </p>
 
 
