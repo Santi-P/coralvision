@@ -12,7 +12,7 @@ Recent efforts have been made to create high-quality survey images of coral reef
 
 The Colab Notebook can be found [here](https://colab.research.google.com/drive/1BdOVKfzQDa5M9Nl6r9FscYYf4isn3kRT?usp=sharing)
 
-[Here](ab) is the link to a short video presentation.
+[Here](https://youtu.be/hrq8cYnwoHY) is the link to a short video presentation.
 
 An additional notebook containing some preprocessing and visualization can be found [here](https://github.com/Santi-P/coralvision/blob/main/coral_preprocess.ipynb).
 
