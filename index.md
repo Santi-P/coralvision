@@ -55,11 +55,19 @@ The next I tested pre-trained image recognition models. I chose Resnet18 and Goo
 
 The authors of the dataset conducted several experimental setups. These include binary classifications (e.g coral vs. non-coral), within-year and across years. I decided to focus on the between-year fine-grained classification task with 9 labels. For this, the models were trained on the 2008 dataset consisting of around 600 images and tested on the equally large 2009 dataset. The original dataset used a 3-fold validation technique to determine the classification performance on the intra-year setup. I decided to use the 2008-2009 setup because the splits for the intra-year experiment were not provided and I believe this is the best way to compare model performance. The 2008-2009 setup is also harder with the original models achieving only 0.67 accuracy. 
 
+
+
 |             | Random | SVM Baseline | Small CNN | Resnet18 | GoogleNet |
 |-------------|--------|--------------|-----------|----------|-----------|
 | Accuracy    | 0.29   | 0.67         | 0.59      | 0.71     | 0.74      |
 | F1          | -      | -            | 0.35      | 0.59     | 0.68      |
 | Weighted F1 | -      | -            | 0.57      | 0.73     | 0.73      |
+
+
+
+The table above shows the classification results for different models. The random and SVM baselines are taken from the original paper. As expected, the small CNN performed rather poorly. This was more or less expected and its poor performance suggests that the small CNN lacks the complexity to handle this dataset. However, it was still rather surprising how poorly it compared to a non-deep learning method. This goes to show that meticulously filters in addition to old-school machine learning methods can still perform very well. 
+
+With the pre-trained models, there is a significant increase in performance with GoogleNet, the best performing model, achieving a 7% increase over the SVM baseline. These results show that deeper and larger models perform better as well as the viability of transfer learning from generic image recognition tasks to domain-specific tasks such as underwater coral patch classification in this case. 
 
 
 ![conf_ggnet](docs/assets/confusion_ggnet.png)![conf_svm](docs/assets/confusion_svm.png)
