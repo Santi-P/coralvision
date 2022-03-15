@@ -28,10 +28,8 @@ The [Moorea Labeled Corals dataset](http://vision.ucsd.edu/content/moorea-labele
 The main task to be automated is then to label random pixels in a given image. The authors  of the dataset (Beijbom et al, 2012) argue that “A full manual segmentation would be too time-consuming to collect and neither bounding boxes nor gross image labels provide the level of detail needed.” Additionally, there is high variability in the size, color, and shape of corals and the boundaries are often ambiguous. 
 
 <p align="center">
-  <img src="docs/assets/sample_patch_large.png" />
-  
+  <img src="docs/assets/sample_patch_large.png" >
   <em>Images and Annotations from the MLC dataset</em> 
-
 </p>
 
 
