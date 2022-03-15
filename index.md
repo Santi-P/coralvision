@@ -69,14 +69,15 @@ The table above shows the classification results for different models. The rando
 
 With the pre-trained models, there is a significant increase in performance with GoogleNet, the best performing model, achieving a 7% increase over the SVM baseline. These results show that deeper and larger models perform better as well as the viability of transfer learning from generic image recognition tasks to domain-specific tasks such as underwater coral patch classification in this case. 
 
-A systematic pattern of misclassification is evident when further examining the errors produced by the models. Depicted below is the confusion matrix of the Googlenet model on the 2009 data split. The largest source of misclassification is due to the models confusing Crustose Coralline Algae (CCA) for various types of corals, especially with Montipora corals. This systematic misclassification was also evident in the SVM baseline. There are a few possible explanations for this that may not be mutually exclusive. Firstly, the dataset is highly imbalanced and Crustose Coralline Algae account for around half of all the patches. This can result in the models being biased towards predicting CCA in the absence of information. It was also noted by the authors of the dataset that CCA and Turf algae are notoriously difficult to distinguish resulting in poor inter-annotator agreement in other datasets. Another reason for the confusion is that CCA usually grows on dead corals! These overgrown dead corals are then classified as CCA. 
+A systematic pattern of misclassification is evident when further examining the errors produced by the models. Depicted below is the confusion matrix of the Googlenet model on the 2009 data split. The largest source of misclassification is due to the models confusing Crustose Coralline Algae (CCA) for various types of corals, especially with Montipora corals. 
 
 ![conf_ggnet](docs/assets/confusion_ggnet.png)
 
+This systematic misclassification was also evident in the SVM baseline below.
 
 ![conf_svm](docs/assets/confusion_svm.png)
 
-
+ There are a few possible explanations for this that may not be mutually exclusive. Firstly, the dataset is highly imbalanced and Crustose Coralline Algae account for around half of all the patches. This can result in the models being biased towards predicting CCA in the absence of information. It was also noted by the authors of the dataset that CCA and Turf algae are notoriously difficult to distinguish resulting in poor inter-annotator agreement in other datasets. Another reason for the confusion is that CCA usually grows on dead corals! These overgrown dead corals are then classified as CCA. 
 ### Discussion
 
 ## Further Work 
