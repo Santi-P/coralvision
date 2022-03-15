@@ -53,6 +53,8 @@ The next I tested pre-trained image recognition models. I chose Resnet18 and Goo
 
 ## Results
 
+The authors of the dataset conducted several experimental setups. These include binary classifications (e.g coral vs. non-coral), within-year and across years. I decided to focus on the between-year fine-grained classification task with 9 labels. For this, the models were trained on the 2008 dataset consisting of around 600 images and tested on the equally large 2009 dataset. The original dataset used a 3-fold validation technique to determine the classification performance on the intra-year setup. I decided to use the 2008-2009 setup because the splits for the intra-year experiment were not provided and I believe this is the best way to compare model performance. The 2008-2009 setup is also harder with the original models achieving only 0.67 accuracy. 
+
 |             | Random | SVM Baseline | Small CNN | Resnet18 | GoogleNet |
 |-------------|--------|--------------|-----------|----------|-----------|
 | Accuracy    | 0.29   | 0.67         | 0.59      | 0.71     | 0.74      |
