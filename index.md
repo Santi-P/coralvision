@@ -86,6 +86,9 @@ This systematic misclassification was also evident in the SVM baseline below.
 
 ## Further Work 
 
+Another approach with using this dataset would be to try to cast it into a segmentation problem. Perhaps there is a way to use the small number of annotations given in order to generate rough masks over the images. This may be useful for obtaining high-quality statistics about coral coverage. Or maybe the segmentations could be trained in a semi-supervised manner where only a small number of pixel are labeled according to class.  
+
+
 ## References
 
 
