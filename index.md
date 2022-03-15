@@ -18,7 +18,7 @@ An additional notebook containing some preprocessing and visualization can be fo
 
 ## Moorea Labeled Corals Dataset (MLC)
 
-The Moorea Labeled Corals dataset (Beijbom et al, 2012) contains 2055 high-resolution underwater images taken from six sites around the island of Moorea in French Polynesia. The data is evenly distributed across 3 years (2008, 2009, 2010).  The data is annotated using random sampling, in which experts assign one of 30 labels to randomly selected pixels in the image. Each image contains roughly 200 annotated points. Nine classes account for 96% of the dataset. These can be further divided into corals and non-corals.
+The [Moorea Labeled Corals dataset](http://vision.ucsd.edu/content/moorea-labeled-corals) (Beijbom et al, 2012) contains 2055 high-resolution underwater images taken from six sites around the island of Moorea in French Polynesia. The data is evenly distributed across 3 years (2008, 2009, 2010).  The data is annotated using random sampling, in which experts assign one of 30 labels to randomly selected pixels in the image. Each image contains roughly 200 annotated points. Nine classes account for 96% of the dataset. These can be further divided into corals and non-corals.
 
 <p align="center">
 <img src="docs/assets/sample_patches.png" alt="sample_patches" > 
@@ -97,6 +97,8 @@ This systematic misclassification was also evident in the SVM baseline below.
  This fact might actually be a hard constraint on how well the models can perform. Although the authors of the dataset do not provide inter-annotator agreements, similar coral patch classification datasets only show around 80%-90% inter-annotator agreements. This gets especially worse when experts are asked to differentiate between algae species such as CCA and turf algae. In short, this dataset is hard and might require additional knowledge that is not visually present. Human experts are also not that good at differentiating seaweed types. 
 
 ## Further Work 
+
+The first improvement I would do if I were to continue working on this project is to properly balance the dataset in order to determine the exact effects of the CCA confusion. It would also be interesting to see if further pre-training the models on texture recognition datasets such [MINC-2500](http://opensurfaces.cs.cornell.edu/publications/minc/) could be helpful. 
 
 Another approach with using this dataset would be to try to cast it into a segmentation problem. Perhaps there is a way to use the small number of annotations given in order to generate rough masks over the images. This may be useful for obtaining high-quality statistics about coral coverage. Or maybe the segmentations could be trained in a semi-supervised manner where only a small number of pixel are labeled according to class.  
 
