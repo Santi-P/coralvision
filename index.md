@@ -51,6 +51,12 @@ Additionally, I played around with the contrast and saturation but it was diffic
 
 ### Results
 
+|             | Random | SVM Baseline | Small CNN | Resnet18 | GoogleNet |
+|-------------|--------|--------------|-----------|----------|-----------|
+| Accuracy    | 0.29   | 0.67         | 0.59      | 0.71     | 0.74      |
+| F1          | -      | -            | 0.35      | 0.59     | 0.68      |
+| Weighted F1 | -      | -            | 0.57      | 0.73     | 0.73      |
+
 ### Discussion
 
 ### Further Work 
