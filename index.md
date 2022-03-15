@@ -23,10 +23,21 @@ The main task to be automated is then to label random pixels in a given image. T
 <img align="left" src="docs/assets/sample_anno.png" alt="sample_anno" width="400" height="400">
 <em>Random Point Annotations</em> 
 
-
-
-
 ## Method
+The general approach I use for this problem is to extract patches centered around the annotated points from the high-resolution image and run them through a classifier. 
+
+### Previous Approach
+
+The creators of the dataset initially used 61x61 patch sizes together with a rotational invariant filter bank. These are then fed into a Support Vector Machine if an RBF kernel in order to classify the patches. Using the method above, the authors achieved a 0.74 accuracy score when classifying patches within the same year. This is however reduced to 0.67 when training on the data collected from 2008 and testing on 2009 data. 
+
+
+### Preprocessing
+
+I started out by extracting square patches of different sizes in order to find which one is best. I used the annotated pixel as the center and cropped patches from the image. I decided to ignore patches that would lie outside the image since the patches are small enough as they are and I did not want to introduce additional noise into the dataset. In practice, there were only a very small number of patches that were dropped by this method. Good patch sizes are important since a small patch size would not include enough visual information and large patch sizes may include other coral types which may further confuse the classifier. I found that 128x128 patches performed slightly better than 64x64 and were on par with larger patches. This more or less coincides with the findings of the original paper. I tested these on a small subset of the data using a simple convolutional network. This was done to conserve GPU runtime on Colab. 
+
+Additionally, I played around with the contrast and saturation but it was difficult to determine whether this affected the final results in an impactful way. I deemed data augmentations techniques such as random flips and crops to be unnecessary for classifying coral patches, however, I did not rigorously test them out. Finally, I extracted 3x128x128 tensors and normalized them in order to make the data compatible with models that were pre-trained on Imagenet. I used bilinear resizing to fit the input dimensions of different pre-trained models. 
+
+
 
 ### Data & Preprocessing
 
