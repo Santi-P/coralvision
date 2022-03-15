@@ -47,7 +47,8 @@ Additionally, I played around with the contrast and saturation but it was diffic
 
 I tested out three models: a simple two-layer CNN, pre-trained Resnet18, and GoogLenet. I intended to use the small CNN model as a baseline and to see how it compared to the results from the previous approach which used SVMs. The model architecture was taken from the PyTorch tutorial for classifying CIFAR dataset. It consists of two convolutional layers with kernel size 5 and 6 and 16 output channels respectively. Max pooling is used between the layers and the results of the convolutions are passed into 3 Linear layers with ReLU activations. 
 
-The next I tested pre-trained image recognition models. I chose Resnet18 and Googlenet (Inception V1) due to their relatively high performance on image classification tasks as well their size and ease of use within PyTorch. 
+The next I tested pre-trained image recognition models. I chose Resnet18 and Googlenet (Inception V1) due to their relatively high performance on image classification tasks as well their size, fine-tuning time, and ease of use within PyTorch. I used the SGD optimizer for 5 epochs. I noticed that the small CNN had trouble converging and increased the training epochs for it to 10 while the rest of the pre-trained models remain the same. The training script from the PyTorch tutorial was used and I slightly modified it to output accuracies on the validation set after every epoch. A learning rate scheduler with 0.1, 0.001, and 0.001 was used with the later epochs having a smaller learning rate. Fine-tuning for Resnet18 and Googlenet took around 10-15 minutes per epoch on Google Colab GPU.
+
 
 
 ## Results
