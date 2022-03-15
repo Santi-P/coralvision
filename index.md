@@ -80,12 +80,13 @@ A systematic pattern of misclassification is evident when further examining the 
 
 <p align="center">
   <img src="docs/assets/confusion_ggnet.png"  width="500" height="400" />
-  
 </p>
 
 This systematic misclassification was also evident in the SVM baseline below.
 <p align="center">
   <img src="docs/assets/confusion_svm.png" />
+ </p>
+
 *Confusion Matrix from Beijbom et al's SVM classifier*
 
 
