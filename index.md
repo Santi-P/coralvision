@@ -75,9 +75,9 @@ With the pre-trained models, there is a significant increase in performance with
 A systematic pattern of misclassification is evident when further examining the errors produced by the models. Depicted below is the confusion matrix of the Googlenet model on the 2009 data split. The largest source of misclassification is due to the models confusing Crustose Coralline Algae (CCA) for various types of corals, especially with Montipora corals. 
 
 <p align="center">
-  <img src="docs/assets/confusion_ggnet.png" />
-  width="800" 
-  height="600"
+  <img src="docs/assets/confusion_ggnet.png"  width="800" 
+  height="600" />
+
 </p>
 
 
